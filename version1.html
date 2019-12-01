@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+function fibonacci (number) {
+      if (number==1){
+          return 1; 
+     }
+      else if (number == 2){
+          return 1; 
+    }
+    else{
+          return number; 
+    }
+     //otherwise return sum of fibonacci of previous two numbers
+     }
+
+function compute_and_display() {
+     // get the value from the input
+     //result = fibonacci(input)
+     //display result on the webpage
+    
+     var input = document.forms["myForm"]["num"].value;
+     result = fibonacci(input);
+    document.getElementById("output_goes_here").innerHTML = result;
+    
+     }
+
+</script>
+</head>
+<body>
+<!-- USER INPUTS A NUMBER -->
+    
+<form name="myForm" onsubmit="compute_and_display()" method="post">
+  Name: <input type="number" name="num">
+    <!--BUTTON THAT RUNS "compute_and_display()" -->
+  <input type="submit" value="Submit">
+</form>
+
+
+
+<p id="output_goes_here"></p>
+</body>
+</html>
